@@ -43,7 +43,7 @@ other clients, or you can open the http://localhost:8080/exercise3_iql for visua
 To use the API, send a POST request to the `/exercise3` endpoint with a GraphQL query in the request body. For example, you might send the following query to get the number of COVID cases and deaths in the US and Canada:
 
 ```sh
-curl -X POST -H "Content-Type: application/json" --data-raw '{ "query": "{ countryStatsByCountryName(names: [\"US\", \"Canada\"]) { cases, deaths } }" }' http://localhost:8080/exercise3
+curl -X POST -H "Content-Type: application/json" --data-raw '{ "query": "{ countryStatsByCountryName(names: [\"USA\", \"Canada\"]) { cases, deaths } }" }' http://localhost:8080/exercise3
 ```
 
 The response will be a JSON object containing the requested data.
@@ -51,7 +51,7 @@ The response will be a JSON object containing the requested data.
 To use the visual interface, use this:
 ```
 {
-  countryStatsByCountryName(names: ["US", "Canada"]) {
+  countryStatsByCountryName(names: ["USA", "Canada"]) {
     cases
     deaths
   }
