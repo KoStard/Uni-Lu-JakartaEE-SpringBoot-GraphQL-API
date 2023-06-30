@@ -1,0 +1,38 @@
+type CountryInfo {
+  id: Int
+  iso2: String
+  iso3: String
+  lat: Float
+  long: Float
+  flag: String
+}
+
+type CountryStats {
+  updated: Float
+  country: String
+  countryInfo: CountryInfo
+  cases: Int
+  todayCases: Int
+  deaths: Int
+  todayDeaths: Int
+  recovered: Int
+  todayRecovered: Int
+  active: Int
+  critical: Int
+  casesPerOneMillion: Float
+  deathsPerOneMillion: Float
+  tests: Int
+  testsPerOneMillion: Float
+  population: Int
+  continent: String
+  oneCasePerPeople: Float
+  oneDeathPerPeople: Float
+  oneTestPerPeople: Float
+  activePerOneMillion: Float
+  recoveredPerOneMillion: Float
+  criticalPerOneMillion: Float
+}
+
+type Query {
+  countryStatsByCountryName(names: [String!]!): [CountryStats]
+}
